@@ -2,11 +2,11 @@
 
 Personal portfolio built with React and Vite to showcase my projects, experience, education, and technical profile.
 
-Live site:
+## Live Site :globe_with_meridians:
 
 - https://personal-portfolio-azure.vercel.app
 
-## Stack
+## Tech Stack :gear:
 
 - React
 - Vite
@@ -14,16 +14,16 @@ Live site:
 - Framer Motion
 - React Icons
 
-## Sections
+## What You'll Find :sparkles:
 
-- Hero
+- Hero section
 - Skills & Experience
 - Education
 - Highlights
 - Projects
 - Contact
 
-## Run locally
+## Local Development :computer:
 
 ```bash
 npm install
@@ -36,14 +36,14 @@ Open the local URL shown by Vite, usually:
 http://localhost:5173
 ```
 
-## Production build
+## Production Build :package:
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Deployment
+## Deployment :rocket:
 
 This project is configured for Vercel with:
 
@@ -56,7 +56,13 @@ To deploy from the terminal:
 vercel --prod
 ```
 
-## Notes
+## Notes :memo:
 
 - The portfolio content is managed mainly from `src/constants/index.js`.
 - The resume file is served from `public/CV_Tecnico_Juan_Higuera.pdf`.
+
+## A Bit More Context :wave:
+
+- Built to present my work in a cleaner, more personal way than a standard CV alone.
+- Focused on frontend presentation, but backed by projects that also cover mobile and full-stack development.
+- Deployed on Vercel and kept in sync with GitHub.
