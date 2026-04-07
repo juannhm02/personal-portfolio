@@ -10,7 +10,7 @@ const Project = (props) => {
         <img
           className="flex-shrink-0 object-cover w-20 h-20 rounded-full ring-4 ring-gray-300"
           src={props.image}
-          alt=""
+          alt={props.title}
         />
 
         <div className="mt-4 w-full">
@@ -18,7 +18,7 @@ const Project = (props) => {
             {props.title}
           </h1>
           <p className="font-poppins font-normal text-dimWhite mt-3 mb-2">
-            Tech Stack
+            Stack
           </p>
           <div className="text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
             <div className="flex flex-wrap gap-4">
@@ -43,7 +43,7 @@ const Project = (props) => {
 
       <div className="flex mt-4 -mx-2">
         {props.github ? (
-          <a href={props.github} target="_blank">
+          <a href={props.github} target="_blank" rel="noopener noreferrer">
             <AiFillGithub
               size="2rem"
               className="text-white mr-1 hover:text-teal-200"
@@ -53,7 +53,7 @@ const Project = (props) => {
           ""
         )}
         {props.link ? (
-          <a href={props.link} target="_blank">
+          <a href={props.link} target="_blank" rel="noopener noreferrer">
             <BsLink45Deg
               size="2rem"
               className="text-white hover:text-teal-200"

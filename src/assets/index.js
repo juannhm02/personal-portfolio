@@ -1,4 +1,6 @@
-import parthmittal from "./parth.svg";
+import ucoBadge from "./uco-badge.svg";
+import ucoLogoCropped from "./uco-logo-cropped.png";
+import ucoLogoOfficial from "./uco-logo-official.png";
 import profilePic from "./profile-pic.jpg";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -53,7 +55,6 @@ export {
   genesis,
   portfolio,
   cdc,
-  parthmittal,
   profilePic,
   chargeswap,
   placeicon,
@@ -81,5 +82,8 @@ export {
   placeholder,
   hackathon_curation_agent,
   kudos,
-  web3_marketing_hackathon
+  web3_marketing_hackathon,
+  ucoBadge,
+  ucoLogoCropped,
+  ucoLogoOfficial
 };

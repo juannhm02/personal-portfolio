@@ -1,103 +1,35 @@
 import {
-  nitk,
-  gdsc,
-  iris,
-  ecell,
-  genesis,
-  portfolio,
-  cdc,
-  chargeswap,
-  placeicon,
-  recruitment,
-  oracle,
-  comicify_ai,
-  greentrust,
-  averlon,
-  devfolio,
-  pba,
-  ethglobal,
-  polkadot,
-  lightspeed,
-  dennisivy,
-  manipal,
-  icon,
-  ethforall,
-  ethindia,
-  globalAi,
-  khoj,
-  echo,
-  kosh,
-  polkadot_dev_cli,
-  hackathon_curation_agent,
-  kudos,
-  web3_marketing_hackathon
-} from "../assets";
-
-import {
   AiFillGithub,
-  AiFillInstagram,
   AiFillLinkedin,
   AiFillMail,
-  AiOutlineTwitter,
   AiFillHtml5,
-  AiOutlineGitlab,
 } from "react-icons/ai";
-
 import {
+  SiC,
+  SiCplusplus,
   SiDjango,
+  SiDocker,
+  SiExpress,
+  SiGit,
   SiJavascript,
-  SiBootstrap,
+  SiMariadb,
+  SiMongodb,
+  SiMysql,
+  SiNestjs,
+  SiNodedotjs,
+  SiPython,
   SiReact,
   SiTailwindcss,
-  SiGraphql,
-  SiPython,
-  SiCplusplus,
-  SiC,
-  SiRubyonrails,
-  SiJquery,
-  SiPostman,
-  SiGit,
-  SiMysql,
-  SiSolidity,
-  SiNetlify,
-  SiVite,
-  SiArduino,
-  SiWeb3Dotjs,
-  SiIpfs,
-  SiDotnet,
-  SiTwilio,
-  SiFlask,
-  SiOpenai,
-  SiGooglecloud,
-  SiNextdotjs,
   SiTypescript,
-  SiNodedotjs,
-  SiOracle,
-  SiSupabase,
-  SiGmail,
-  SiGooglesheets,
-  SiThirdweb,
-  SiVercel,
-  SiIntellijidea
+  SiVite,
 } from "react-icons/si";
+import { DiJava } from "react-icons/di";
+import { ucoLogoOfficial } from "../assets";
 
-import { FaHardHat, FaRust } from "react-icons/fa";
-
-import { IoIosNotificationsOutline } from "react-icons/io";
-
-import { FaGolang, FaXTwitter } from "react-icons/fa6";
-
-import { DiCss3, DiJava, DiMsqlServer, DiRuby } from "react-icons/di";
-import { VscAzure } from "react-icons/vsc";
-import { BiLogoVisualStudio } from "react-icons/bi";
-
-import { RiGeminiFill } from "react-icons/ri";
-
-export const resumeLink =
-  "https://drive.google.com/file/d/1vkxyMDB5_KpMwt4QXFgT2aqdRizr8Czh/view?usp=sharing";
-export const repoLink = "https://github.com/mittal-parth/personal-portfolio";
-
-export const callToAction = "https://www.linkedin.com/in/mittal-parth";
+export const resumeLink = "/CV_Tecnico_Juan_Higuera.pdf";
+export const repoLink = "https://github.com/juannhm02/personalPortfolio";
+export const callToAction =
+  "https://www.linkedin.com/in/juan-higuera-mohedano-189934232/";
 
 export const navLinks = [
   {
@@ -110,298 +42,149 @@ export const navLinks = [
   },
   {
     id: "achievements",
-    title: "Achievements",
+    title: "Highlights",
   },
   {
     id: "projects",
     title: "Projects",
   },
   {
-    id: "openSource",
-    title: "Open Source",
-  },
-  {
-    id: "extraCurricular",
-    title: "Extra Curricular",
-  },
-  {
     id: "contactMe",
-    title: "Contact Me",
+    title: "Contact",
   },
 ];
 
-// Add your past academic experiences here
 export const educationList = [
   {
     id: "education-1",
-    icon: nitk,
-    title: "National Institute of Technology Karnataka, Surathkal",
-    degree: "Bachelor of Technology",
-    duration: "December 2020 - May 2024",
-    content1: "Major: Electronics and Communication Engineering",
-    content2: "Minor: Information Technology",
-  },
-  {
-    id: "education-2",
-    icon: pba,
-    title: "Polkadot Blockchain Academy",
-    degree: "",
-    duration: "May 2024 - June 2024",
+    icon: ucoLogoOfficial,
+    title: "University of Cordoba",
+    degree: "BSc in Computer Engineering",
+    duration: "University education",
     content1:
-      "Graduated with a distinction in the fifth cohort of the Polkadot Blockchain Academy at the National University of Singapore.",
+      "Strong technical foundation in web development, software engineering, and collaborative work.",
+    content2:
+      "Track record combining academic projects, digital product work, and student representation.",
   },
 ];
 
-// Add your past achievements here for example - rankings in hackathons/events
 export const achievements = [
   {
     id: "a-1",
-    icon: ethindia,
-    event: "ETHIndia'24 | India's Largest Ethereum Hackathon",
-    position: "Winner",
-    content1: "Top 10 Overall Finalists/Winners, True Network's Winner",
-    content2: "Polkadot's 1st Runner Up, Lit Protocol's 2nd Runner Up",
-    content3: "Coinbase Pool Prize, Base Top 10",
-    article:
-      "https://www.linkedin.com/posts/mittal-parth_super-stoked-to-announce-that-our-team-emerged-activity-7274735259621961729-tkq4?utm_source=share&utm_medium=member_desktop",
-    project: "https://devfolio.co/projects/khoj-3336",
-    youtube:
-      "https://www.youtube.com/live/qJ4OCtnvjUY?si=VkcnHEdwJTEEDlMg&t=4718",
+    icon: "https://www.google.com/s2/favicons?domain=genial.ly&sz=64",
+    event: "Genially",
+    position: "Frontend Developer Intern",
+    content1:
+      "Product experience working with React and JavaScript in a real-world environment.",
+    content2:
+      "Focused on clean, maintainable, user-oriented interfaces.",
+    article: "https://genial.ly/",
+    github: "https://github.com/juannhm02/frontend-code-test",
   },
   {
     id: "a-2",
-    icon: ethglobal,
-    event: "ETHIndia'22 | World's Largest Ethereum Hackathon",
-    position: "Winner",
-    content1: "Top 12 Winners among 20k+ registrations",
-    content2: "One of Polygon's Best Public Goods",
-    content3: "Best Module on Biconomy SDK",
+    icon: ucoLogoOfficial,
+    event: "EPSC Student Council - UCO",
+    position: "President",
+    content1:
+      "Public student representation role at the School of Engineering of the University of Cordoba.",
+    content2:
+      "Profile combining software development, communication, and university leadership.",
     article:
-      "https://www.thehindu.com/news/cities/Mangalore/nitk-iiit-delhi-team-makes-it-to-top-12-winners-in-ethindia-22/article66238923.ece",
-    project: "https://devfolio.co/projects/chargeswap-3527",
-    youtube: "https://youtu.be/9rieTya8Yds?t=3908",
+      "https://www.uco.es/organiza/centros/eps/en/2-uncategorised/89-consejo-de-estudiantes",
   },
   {
     id: "a-3",
-    icon: polkadot,
-    event: "Polkadot Hackathon: Europe Edition",
-    position: "2nd Runner Up in the ink! Smart Contract Category",
+    icon: "https://github.com/juannhm02.png",
+    event: "Technical profile on GitHub",
+    position: "Frontend-focused with full-stack exposure",
     content1:
-      "Built GreenTrust offering a novel solution for obtaining certification in organic farming.",
-    content2: "",
-    content3: "",
-    article:
-      "https://www.linkedin.com/posts/mittal-parth_hackathon-winners-web3-activity-7048340759116214272-eJvo?utm_source=share&utm_medium=member_desktop&rcm=ACoAADOa76QB7zljgX8NK4xVSZXi0Z49ETMeC-g",
-    github: "https://github.com/pranav2305/GreenTrust",
-  },
-  {
-    id: "a-4",
-    icon: lightspeed,
-    event: "Warpspeed by Lightspeed 2023",
-    position: "1st Runner Up",
-    content1: "1st Runner Up Overall by Lightspeed among 107 hackers",
-    content2: "Top 3 projects using Replit",
-    content3: "1st Runner Up by Amazon Web Services (AWS)",
-    article: "https://shorturl.at/fhjsT",
-  },
-  {
-    id: "a-5",
-    icon: lightspeed,
-    event: "Warpspeed: Agentic AI Hackathon | Lightspeed India",
-    position: "Runners Up in the Base Track",
-    content1: "Built an ambient virtual assistant before ChatGPT Pulse",
-    content2: "Runners up in the Base Track with the Agentic AI theme for 2025",
-    project: "https://devfolio.co/projects/aeva-58d2",
-  },
-  {
-    id: "a-6",
-    icon: kudos,
-    event: "Kudos Carnival | Polkadot Blockchain Academy",
-    position: "Runner Up",
-    content1: "Finished 2nd globally among PBA Alumni in a 6-week event",
-    content2: "Contributed to several repositories in the Polkadot ecosystem in a Hacktoberfest-style event",
-    article: "https://www.morekudos.com/carnival",
-  },
-  {
-    id: "a-7",
-    icon: web3_marketing_hackathon,
-    event: "Web3 Marketing Hackathon",
-    position: "Runner Up",
-    content1:
-      "2nd position in the Polkadot Challenge I - Creative Marketing Strategies to Boost Polkadot Awareness & Adoption",
-    content2: "",
-    content3: "",
-    article: "https://x.com/polkadotsub0/status/1998425721916551355?s=46",
-    project: "https://taikai.network/OutofOrdinary/hackathons/web3mkthack/projects/cmi0skdbk0257vu09q3n8m44u/idea",
-  },
-  {
-    id: "a-8",
-    icon: globalAi,
-    event: "Global AI HackFest 2023",
-    position: "Winner",
-    content1:
-      "1st Position in the Education, Finance & Tech track by AI Planet",
-    content2: "",
-    content3: "",
-    article:
-      "https://www.linkedin.com/posts/mittal-parth_happy-to-share-that-comicifyai-emerged-as-activity-7078790186435833856-88fh",
-  },
-  {
-    id: "a-9",
-    icon: dennisivy,
-    event: "September Hackathon by Dennis Ivy",
-    position: "Winner",
-    content1:
-      "Rated the best portfolio website among 450+ participants across the globe.",
-    content2: "",
-    content3: "",
-    youtube: "https://www.youtube.com/watch?v=X2473En3h_o&t=5278s",
-    project: "https://parthmittal.netlify.app/",
-  },
-  {
-    id: "a-10",
-    icon: manipal,
-    event: "Manipal Hackathon'22",
-    position: "Consolation Prize",
-    content1: "Top 10 among 500+ teams across India",
+      "Public repositories covering React, Vite, Node.js, NestJS, Django, Java, and C++.",
     content2:
-      "Developed a cross-platform mobile application to address the problem of social cohesion.",
-    content3: "",
-    article: "https://shorturl.at/exEIQ",
-  },
-  {
-    id: "a-11",
-    icon: icon,
-    event: "ICON Hyperbuild Hackathon",
-    position: "Honorable Mention",
-    content1:
-      "Honorable Mention among 655 participants across the globe in a 3 month-long online hackathon.",
-    content2: "",
-    content3: "",
-    project: "https://devpost.com/software/green-trust-xj2w6g",
-  },
-  {
-    id: "a-12",
-    icon: ethforall,
-    event: "ETHForAll 2023",
-    position: "Top 3 Superfluid Projects",
-    content1:
-      "Bounty winners among 430 projects in ETHGlobal's largest online hackathon.",
-    content2: "",
-    content3: "",
-    project: "https://devfolio.co/projects/green-trust-ed14",
+      "Mix of personal projects, academic work, and applications with real-world scope.",
+    article: "https://github.com/juannhm02",
+    project: "https://github.com/juannhm02/juannhm02",
   },
 ];
 
-// Add your software developments skills here for example - programming languages, frameworks etc.
 export const skills = [
   {
-    title: "Programming Languages",
+    title: "Languages",
     items: [
       {
         id: "pl-1",
-        icon: SiPython,
-        name: "Python",
-      },
-      {
-        id: "pl-2",
-        icon: DiJava,
-        name: "Java",
-      },
-      {
-        id: "pl-3",
-        icon: SiSolidity,
-        name: "Solidity",
-      },
-      {
-        id: "pl-4",
-        icon: DiRuby,
-        name: "Ruby",
-      },
-      {
-        id: "pl-5",
         icon: SiJavascript,
         name: "JavaScript",
       },
       {
-        id: "pl-6",
+        id: "pl-2",
         icon: SiTypescript,
         name: "TypeScript",
       },
       {
-        id: "pl-7",
-        icon: SiCplusplus,
-        name: "C++",
-      },
-      {
-        id: "pl-8",
-        icon: FaGolang,
-        name: "Go",
-      },
-      {
-        id: "pl-9",
-        icon: FaRust,
-        name: "Rust",
-      },
-      {
-        id: "pl-10",
-        icon: SiC,
-        name: "C",
-      },
-      {
-        id: "pl-11",
+        id: "pl-3",
         icon: AiFillHtml5,
         name: "HTML",
       },
       {
-        id: "pl-12",
-        icon: DiCss3,
-        name: "CSS",
+        id: "pl-4",
+        icon: SiPython,
+        name: "Python",
+      },
+      {
+        id: "pl-5",
+        icon: DiJava,
+        name: "Java",
+      },
+      {
+        id: "pl-6",
+        icon: SiCplusplus,
+        name: "C++",
+      },
+      {
+        id: "pl-7",
+        icon: SiC,
+        name: "C",
       },
     ],
   },
   {
-    title: "Frameworks/Libraries",
+    title: "Frameworks & Environment",
     items: [
       {
         id: "f-1",
         icon: SiReact,
-        name: "ReactJS",
+        name: "React",
       },
       {
         id: "f-2",
-        icon: SiDjango,
-        name: "Django",
+        icon: SiVite,
+        name: "Vite",
       },
       {
         id: "f-3",
-        icon: SiRubyonrails,
-        name: "Ruby on Rails",
+        icon: SiTailwindcss,
+        name: "Tailwind",
       },
       {
         id: "f-4",
-        icon: SiBootstrap,
-        name: "Bootstrap",
+        icon: SiNodedotjs,
+        name: "Node.js",
       },
       {
         id: "f-5",
-        icon: SiTailwindcss,
-        name: "Tailwind CSS",
+        icon: SiExpress,
+        name: "Express",
       },
       {
         id: "f-6",
-        icon: SiJquery,
-        name: "jQuery",
+        icon: SiNestjs,
+        name: "NestJS",
       },
       {
         id: "f-7",
-        icon: SiGraphql,
-        name: "GraphQL",
-      },
-      {
-        id: "f-8",
-        icon: SiDotnet,
-        name: ".NET",
+        icon: SiDjango,
+        name: "Django",
       },
     ],
   },
@@ -410,108 +193,54 @@ export const skills = [
     items: [
       {
         id: "t-1",
-        icon: SiOracle,
-        name: "Oracle Cloud",
-      },
-      {
-        id: "t-2",
-        icon: VscAzure,
-        name: "Azure",
-      },
-      {
-        id: "t-3",
-        icon: SiMysql,
-        name: "MySQL",
-      },
-      {
-        id: "t-4",
-        icon: SiPostman,
-        name: "Postman",
-      },
-      {
-        id: "t-5",
-        icon: BiLogoVisualStudio,
-        name: "VS Code",
-      },
-      {
-        id: "t-6",
-        icon: SiIntellijidea,
-        name: "IntelliJ IDEA",
-      },
-      {
-        id: "t-7",
         icon: SiGit,
         name: "Git",
       },
       {
-        id: "t-8",
+        id: "t-2",
         icon: AiFillGithub,
         name: "GitHub",
       },
       {
-        id: "t-9",
-        icon: AiOutlineGitlab,
-        name: "Gitlab",
+        id: "t-3",
+        icon: SiDocker,
+        name: "Docker",
       },
       {
-        id: "t-10",
-        icon: SiNetlify,
-        name: "Netlify",
+        id: "t-4",
+        icon: SiMysql,
+        name: "MySQL",
       },
       {
-        id: "t-11",
-        icon: SiVite,
-        name: "ViteJS",
+        id: "t-5",
+        icon: SiMariadb,
+        name: "MariaDB",
+      },
+      {
+        id: "t-6",
+        icon: SiMongodb,
+        name: "MongoDB",
       },
     ],
   },
 ];
 
-// Add your current/past professional work experience here
 export const experiences = [
   {
-    organisation: "Oracle, India",
-    logo: oracle,
-    link: "https://www.oracle.com/in/",
+    organisation: "Genially",
+    logo: "https://www.google.com/s2/favicons?domain=genial.ly&sz=64",
+    link: "https://genial.ly/",
     positions: [
       {
-        title: "Member of Technical Staff",
-        duration: "Oct 2025 - Present",
+        title: "Frontend Developer Intern",
+        duration: "Internship experience",
         content: [
           {
-            text: "Working in the Database as a Service Control Plane team for Oracle Cloud Infrastructure.",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Member of Technical Staff - 1",
-        duration: "Jul 2024 - Sep 2025",
-        content: [
-          {
-            text: "Made several fixes to reduce the time taken for backup deletion from OCI Object Storage for large customers resulting in decreased costs.",
+            text: "Worked with React and JavaScript inside a real digital product environment.",
             link: "",
           },
           {
-            text: "Worked towards building an AI On-Call Agent using an internal agentic framework.",
-            link: "",
-          },
-          {
-            text: "Developed a common integration test framework for ExaCS, ExaDB-XS and ExaCC, reducing code maintenance by ~67% and increased coverage by ~50%",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Member of Technical Staff Intern",
-        duration: "May 2023 - Jul 2023",
-        content: [
-          {
-            text: "Worked with the Exadata Cloud@Customer team in the Database Unit.",
-            link: "",
-          },
-          {
-            text: "Wrote APIs in Java to help gracefully migrate a running ExaC@C infrastructure to a new region in the case of a region failure",
+            text: "Exposure to interface decisions, maintainability, and user-experience-driven development.",
             link: "",
           },
         ],
@@ -519,20 +248,22 @@ export const experiences = [
     ],
   },
   {
-    organisation: "Averlon",
-    logo: averlon,
-    link: "https://averlon.ai/",
+    organisation: "EPSC Student Council, UCO",
+    logo: ucoLogoOfficial,
+    link:
+      "https://www.uco.es/organiza/centros/eps/en/2-uncategorised/89-consejo-de-estudiantes",
     positions: [
       {
-        title: "Software Developer Intern",
-        duration: "Sept 2023 - Feb 2024",
+        title: "President",
+        duration: "Since October 2024",
         content: [
           {
-            text: "Added support for the discoverability of Microsoft Azure assets utilising Go and Gremlin.",
-            link: "",
+            text: "Student representation and institutional participation at the School of Engineering in Cordoba.",
+            link:
+              "https://www.uco.es/organiza/centros/eps/en/2-uncategorised/89-consejo-de-estudiantes",
           },
           {
-            text: "Extended support for Azure for reachability analysis of assets for cloud security posture management.",
+            text: "Role that strengthens communication, coordination, and public responsibility skills.",
             link: "",
           },
         ],
@@ -540,50 +271,20 @@ export const experiences = [
     ],
   },
   {
-    organisation: "IRIS, NITK",
-    logo: iris,
-    link: "https://iris.nitk.ac.in/about_us",
+    organisation: "Personal and academic projects",
+    logo: "https://github.com/juannhm02.png",
+    link: "https://github.com/juannhm02?tab=repositories",
     positions: [
       {
-        title: "Tech Lead",
-        duration: "Apr 2023 - Apr 2024",
+        title: "Frontend and full stack development",
+        duration: "Recent work",
         content: [
           {
-            text: "Led a team of 40+ students in digitizing administrative, academic and alumni-related work.",
+            text: "Built interfaces with React and Vite, alongside backend work with Node.js, Express, and NestJS.",
             link: "",
           },
           {
-            text: "Managed all phases of Software Development Life Cycle (SDLC) for 15+ modules.",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Web Lead",
-        duration: "Apr 2022 - Present",
-        content: [
-          {
-            text: "Managed a team of 6 student developers while also overlooking multiple modules.",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Web Developer",
-        duration: "Nov 2021 - Apr 2022",
-        content: [
-          {
-            text: "Added Conditional Fields support to the Forms Module.",
-            link: "",
-          },
-        ],
-      },
-      {
-        title: "Web Developer Intern",
-        duration: "Jun 2021 - Oct 2021",
-        content: [
-          {
-            text: "Developed a multi-role approval flow system to facilitate data collection and display on the Institute's Department Websites.",
+            text: "Work spanning web, mobile, and academic exercises with broad hands-on practice.",
             link: "",
           },
         ],
@@ -592,620 +293,170 @@ export const experiences = [
   },
 ];
 
-// Add information about all the projects to be listed out in your portfolio
 export const projects = [
   {
     id: "project-1",
-    title: "Khoj",
-    github: "https://github.com/mittal-parth/Khoj",
-    link: "https://playkhoj.com/",
-    image: khoj,
+    title: "ToTusTuus Web",
+    github: "https://github.com/juannhm02/totustuus-web",
+    image: "https://opengraph.githubassets.com/1/juannhm02/totustuus-web",
     content:
-      "Participate in AI-personalised treasure hunts where each clue is a physical location. Earn on-chain rewards and onboard a million users. Overall winning project at ETHIndia'24.",
+      "E-commerce site built with React and Vite, backed by Express for orders, automated emails, and an admin panel.",
     stack: [
       {
         id: "proj1-icon-1",
-        icon: SiSolidity,
-        name: "Solidity",
+        icon: SiReact,
+        name: "React",
       },
       {
         id: "proj1-icon-2",
-        icon: SiTypescript,
-        name: "Typescript",
+        icon: SiVite,
+        name: "Vite",
       },
       {
         id: "proj1-icon-3",
-        icon: SiReact,
-        name: "React.js",
+        icon: SiNodedotjs,
+        name: "Node.js",
       },
       {
         id: "proj1-icon-4",
-        icon: SiTailwindcss,
-        name: "TailwindCSS",
-      },
-      {
-        id: "proj1-icon-5",
-        icon: RiGeminiFill,
-        name: "Gemini",
-      },
-      {
-        id: "proj1-icon-6",
-        icon: SiThirdweb,
-        name: "Thirdweb",
-      },
-      {
-        id: "proj1-icon-7",
-        icon: SiIpfs,
-        name: "IPFS",
+        icon: SiExpress,
+        name: "Express",
       },
     ],
   },
   {
     id: "project-2",
-    title: "Echo",
-    github: "https://github.com/imApoorva36/Echo",
-    link: "https://testflight.apple.com/join/TpYrhKRy",
-    image: echo,
+    title: "APP-ISM",
+    github: "https://github.com/juannhm02/APP-ISMFront",
+    image: "https://opengraph.githubassets.com/1/juannhm02/APP-ISMFront",
     content:
-      "A proactive AI assistant that's always listening and executes without you having to ask. Available on iOS TestFlight.",
+      "Mobile application built with React Native and TypeScript for management workflows, authentication, barcode scanning, and user flows.",
     stack: [
       {
-        id: "projEcho-icon-1",
-        icon: SiTypescript,
-        name: "TypeScript",
-      },
-      {
-        id: "projEcho-icon-2",
+        id: "proj2-icon-1",
         icon: SiReact,
         name: "React Native",
       },
       {
-        id: "projEcho-icon-3",
+        id: "proj2-icon-2",
+        icon: SiTypescript,
+        name: "TypeScript",
+      },
+      {
+        id: "proj2-icon-3",
         icon: SiNodedotjs,
         name: "Node.js",
-      },
-      {
-        id: "projEcho-icon-4",
-        icon: SiSupabase,
-        name: "Supabase",
-      },
-      {
-        id: "projEcho-icon-5",
-        icon: SiVercel,
-        name: "Vercel AI SDK",
       },
     ],
   },
   {
     id: "project-3",
-    title: "Hackathon Curation AI Agent",
-    github: "https://github.com/mittal-parth/hackathon-curation-agent",
-    image: hackathon_curation_agent,
+    title: "UcoLib",
+    github: "https://github.com/juannhm02/UcoLib",
+    image: "https://opengraph.githubassets.com/1/juannhm02/UcoLib",
     content:
-      "An intelligent agent that automatically curates hackathons from your email newsletters, evaluates them using AI, and posts the best ones to Twitter.",
+      "Modular backend with NestJS and TypeScript, designed for scalable services and Docker-based deployment.",
     stack: [
       {
-        id: "proj2-icon-1",
-        icon: SiPython,
-        name: "Python",
+        id: "proj3-icon-1",
+        icon: SiNestjs,
+        name: "NestJS",
       },
       {
-        id: "proj2-icon-2",
-        icon: RiGeminiFill,
-        name: "Gemini",
+        id: "proj3-icon-2",
+        icon: SiTypescript,
+        name: "TypeScript",
       },
       {
-        id: "proj2-icon-3",
-        icon: SiGmail,
-        name: "Gmail API",
+        id: "proj3-icon-3",
+        icon: SiDocker,
+        name: "Docker",
       },
       {
-        id: "proj2-icon-4",
-        icon: SiGooglesheets,
-        name: "Google Sheets API",
-      },
-      {
-        id: "proj2-icon-5",
-        icon: FaXTwitter,
-        name: "Twitter API",
-      },
-      {
-        id: "proj2-icon-6",
-        icon: SiGooglecloud,
-        name: "Google Cloud Platform",
+        id: "proj3-icon-4",
+        icon: SiNodedotjs,
+        name: "Node.js",
       },
     ],
   },
   {
     id: "project-4",
-    title: "Comicify.ai",
-    github: "https://github.com/ayush4345/Comicify.ai",
-    link: "https://devfolio.co/projects/comicifyai-97a6",
-    image: comicify_ai,
+    title: "Countrle",
+    github: "https://github.com/juannhm02/Countrle",
+    link: "https://countrle.netlify.app",
+    image: "https://opengraph.githubassets.com/1/juannhm02/Countrle",
     content:
-      "Convert any academic/news/boring text into cool comic strips using GPT-3.5 and Stable Diffusion!",
-    stack: [
-      {
-        id: "proj3-icon-1",
-        icon: SiReact,
-        name: "React",
-      },
-      {
-        id: "proj3-icon-2",
-        icon: SiTailwindcss,
-        name: "TailwindCSS",
-      },
-      {
-        id: "proj3-icon-3",
-        icon: SiOpenai,
-        name: "OpenAI",
-      },
-      {
-        id: "proj3-icon-4",
-        icon: SiGooglecloud,
-        name: "Google Cloud Platform",
-      },
-      {
-        id: "proj3-icon-5",
-        icon: SiFlask,
-        name: "Flask",
-      },
-    ],
-  },
-  {
-    id: "project-5",
-    title: "Polkadot Dev CLI",
-    github: "https://github.com/mittal-parth/polkadot-dev-cli",
-    link: "https://crates.io/crates/polkadot-dev-cli",
-    image: polkadot_dev_cli,
-    content:
-      "CLI tool for Polkadot developers bundling linting, formatting, and version management. cargo install polkadot-dev-cli.",
+      "Wordle-inspired web game combining Django and React for an interactive experience around countries and general knowledge.",
     stack: [
       {
         id: "proj4-icon-1",
-        icon: FaRust,
-        name: "Rust",
-      },
-    ],
-  },
-  {
-    id: "project-6",
-    title: "Non-Teaching Recruitment Portal, NITK",
-    github: "",
-    link: "http://recruitment.nitk.ac.in/",
-    image: recruitment,
-    content:
-      "The official recruitment portal for non-teaching staff with an admin panel, email notifications and payment integration.",
-    stack: [
-      {
-        id: "proj5-icon-1",
-        icon: SiRubyonrails,
-        name: "Ruby on Rails",
+        icon: SiDjango,
+        name: "Django",
       },
       {
-        id: "proj5-icon-2",
-        icon: SiTailwindcss,
-        name: "TailwindCSS",
-      },
-      {
-        id: "proj5-icon-3",
-        icon: SiJquery,
-        name: "jQuery",
-      },
-    ],
-  },
-  {
-    id: "project-7",
-    title: "GreenTrust",
-    github: "https://github.com/mittal-parth/GreenTrust",
-    link: "https://green-trust-fantom.netlify.app/",
-    image: greentrust,
-    content:
-      "Winning project at 3 hackathons, GreenTrust offers a novel solution for obtaining certification in organic farming by organizing credible and decentralized Participatory Guarantee Systems (PGSs).",
-    stack: [
-      {
-        id: "proj6-icon-1",
+        id: "proj4-icon-2",
         icon: SiReact,
         name: "React",
       },
       {
-        id: "proj6-icon-2",
-        icon: SiTailwindcss,
-        name: "TailwindCSS",
-      },
-      {
-        id: "proj6-icon-3",
-        icon: SiNextdotjs,
-        name: "Next.js",
-      },
-      {
-        id: "proj6-icon-4",
-        icon: SiIpfs,
-        name: "IPFS",
-      },
-      {
-        id: "proj6-icon-5",
-        icon: SiSolidity,
-        name: "Solidity",
-      },
-      {
-        id: "proj6-icon-6",
-        icon: IoIosNotificationsOutline,
-        name: "Push Protocol",
-      },
-    ],
-  },
-  {
-    id: "project-8",
-    title: "ChargeSwap",
-    github: "https://github.com/CommanderAstern/ChargeSwap",
-    link: "https://devfolio.co/projects/chargeswap-3527",
-    image: chargeswap,
-    content:
-      "A Blockchain-based EV-Battery swapping solution - winning project at ETHIndia'22, the world's largest Ethereum Hackathon.",
-    stack: [
-      {
-        id: "proj7-icon-1",
-        icon: SiReact,
-        name: "React",
-      },
-      {
-        id: "proj7-icon-2",
-        icon: SiWeb3Dotjs,
-        name: "Web3.js",
-      },
-      {
-        id: "proj7-icon-3",
-        icon: SiSolidity,
-        name: "Solidity",
-      },
-      {
-        id: "proj7-icon-4",
-        icon: FaHardHat,
-        name: "HardHat",
-      },
-      {
-        id: "proj7-icon-5",
-        icon: SiIpfs,
-        name: "IPFS",
-      },
-      {
-        id: "proj7-icon-6",
-        icon: SiArduino,
-        name: "Arduino",
-      },
-      {
-        id: "proj7-icon-7",
-        icon: IoIosNotificationsOutline,
-        name: "Push Protocol",
-      },
-    ],
-  },
-  {
-    id: "project-9",
-    title: "Samsotech Table Management System",
-    github: "",
-    link: "https://www.linkedin.com/posts/mittal-parth_technologysolutions-softwaredevelopment-technology-activity-6994915645066809344-WnMY?utm_source=share&utm_medium=member_desktop",
-    image: placeicon,
-    content:
-      "Restaurant, Place, Table and realtime Reservation Management with Multi-Tenant Architecture, RBAC, SMS and Email integration for Samsotech International",
-    stack: [
-      {
-        id: "proj8-icon-1",
-        icon: SiDotnet,
-        name: "Dot Net Core MVC 6",
-      },
-      {
-        id: "proj8-icon-2",
-        icon: SiBootstrap,
-        name: "Bootstrap",
-      },
-      {
-        id: "proj8-icon-3",
-        icon: DiMsqlServer,
-        name: "MS Sql Server",
-      },
-      {
-        id: "proj8-icon-4",
-        icon: SiJquery,
-        name: "jQuery",
-      },
-      {
-        id: "proj8-icon-5",
-        icon: SiTwilio,
-        name: "Twillio",
-      },
-    ],
-  },
-  {
-    id: "project-10",
-    title: "Career Development Centre, NITK Website",
-    github: "",
-    link: "http://cdc.nitk.ac.in/",
-    image: cdc,
-    content: "The official website of CDC, NITK with a custom built CMS.",
-    stack: [
-      {
-        id: "proj9-icon-1",
-        icon: SiRubyonrails,
-        name: "Ruby on Rails",
-      },
-      {
-        id: "proj9-icon-2",
-        icon: SiBootstrap,
-        name: "Bootstrap",
-      },
-      {
-        id: "proj9-icon-3",
-        icon: SiJavascript,
-        name: "JavaScript",
-      },
-    ],
-  },
-  {
-    id: "project-11",
-    title: "Portfolio",
-    github: "https://github.com/mittal-parth/personal-portfolio",
-    link: "https://parthmittal.netlify.app/",
-    image: portfolio,
-    content: "Open source developer portfolio template with modern UI/UX. 140+ stars on GitHub.",
-    stack: [
-      {
-        id: "proj10-icon-1",
-        icon: SiReact,
-        name: "React",
-      },
-      {
-        id: "proj10-icon-2",
-        icon: SiTailwindcss,
-        name: "Tailwind CSS",
-      },
-      {
-        id: "proj10-icon-3",
-        icon: AiFillHtml5,
-        name: "HTML",
-      },
-    ],
-  },
-  {
-    id: "project-12",
-    title: "Kosh SDK",
-    github: "https://github.com/mittal-parth/kosh-sdk",
-    link: "https://ethglobal.com/showcase/kosh-hk3mp",
-    image: kosh,
-    content:
-      "Simple and secure way to interact with remote MCP Servers in Trusted Execution Environments (TEEs). Built at ETHGlobal Trifecta Hackathon.",
-    stack: [
-      {
-        id: "proj11-icon-1",
-        icon: SiTypescript,
-        name: "Typescript",
-      },
-      {
-        id: "proj11-icon-2",
-        icon: SiTailwindcss,
-        name: "TailwindCSS",
-      },
-      {
-        id: "proj11-icon-3",
-        icon: SiPython,
-        name: "Python",
+        id: "proj4-icon-3",
+        icon: SiMongodb,
+        name: "MongoDB",
       },
     ],
   },
 ];
 
-// Add links to blogs here
-export const blogPosts = [
-  {
-    id: "post-1",
-    title: "Blog Post 01 - Title",
-    link: "#",
-    date: new Date().toLocaleDateString(), // Can be edited to any string format
-    image: "https://via.placeholder.com/600/92c952",
-    tags: [
-      {
-        id: "tag-1",
-        name: "tag 01",
-      },
-      {
-        id: "tag-2",
-        name: "tag 03",
-      },
-      {
-        id: "tag-3",
-        name: "tag 03",
-      },
-    ],
-  },
-  {
-    id: "post-2",
-    title: "Blog Post 02 - Title",
-    link: "#",
-    date: new Date().toLocaleDateString(),
-    image: "https://via.placeholder.com/600/d32776",
-    tags: [
-      {
-        id: "tag-1",
-        name: "tag 01",
-      },
-      {
-        id: "tag-2",
-        name: "tag 03",
-      },
-      {
-        id: "tag-3",
-        name: "tag 03",
-      },
-    ],
-  },
-  {
-    id: "post-3",
-    title: "Blog Post 03 - Title",
-    link: "#",
-    date: new Date().toLocaleDateString(),
-    image: "https://via.placeholder.com/600/771796",
-    tags: [
-      {
-        id: "tag-1",
-        name: "tag 01",
-      },
-      {
-        id: "tag-2",
-        name: "tag 03",
-      },
-      {
-        id: "tag-3",
-        name: "tag 03",
-      },
-    ],
-  },
-];
+export const blogPosts = [];
 
-// Highlight your GitHub stats like - Organisation, Issues Opened, Pull Requests etc.
 export const stats = [
   {
     id: "stats-1",
-    title: "Organisations",
-    value: "2+",
+    title: "Public repos",
+    value: "10+",
   },
   {
     id: "stats-2",
-    title: "Issues Opened",
-    value: "6+",
+    title: "Primary focus",
+    value: "Frontend",
   },
   {
     id: "stats-3",
-    title: "Pull Requests",
-    value: "6+",
+    title: "Platforms",
+    value: "Web + mobile",
   },
 ];
 
-// List out the extra curricular activities you have indulged in, like - student clubs, research groups etc.
-export const extraCurricular = [
-  {
-    id: 1,
-    organisation: "Devfolio",
-    title: "UniDAO Lead",
-    duration: "December 2021 - Present",
-    content: [
-      {
-        text: "Selected among 5 students across the country to lead the initiative and grow the culture of Blockchain and Ethereum, powered by Devfolio.",
-        link: "https://www.linkedin.com/feed/update/urn:li:activity:7097977924686942209/",
-      },
-      {
-        text: "Led a cohort of 37 selected students over 6 weeks to learn and build in the Ethereum ecosystem.",
-        link: "https://www.linkedin.com/feed/update/urn:li:activity:7095310520282480641/",
-      },
-    ],
-    logo: devfolio,
-  },
-  {
-    id: 2,
-    organisation: "Google Developer Student Club, NITK",
-    title: "Co-Chair",
-    duration: "December 2021 - Present",
-    content: [
-      {
-        text: "Started HackClub to promote and spread the culture of Hackathons in the college. 20+ hackathons particiaptions, 15+ wins over the year.",
-        link: "",
-      },
-      {
-        text: "Co-designed and developed the official website of Incident, NITK with 15K+ visitors",
-        link: "https://incident.nitk.ac.in/",
-      },
-    ],
-    logo: gdsc,
-  },
-  {
-    id: 3,
-    organisation: "Genesis, NITK",
-    title: "Competitions Head",
-    duration: "Sep 2021 - Present",
-    content: [
-      {
-        text: "Qualified for the nationals of Indian Hip Hop Dance Championship",
-        link: "",
-      },
-      {
-        text: "Won 7 inter-college solo dance competitions",
-        link: "",
-      },
-    ],
-    logo: genesis,
-  },
-  {
-    id: 4,
-    organisation: "IRIS, NITK",
-    title: "Tutor",
-    duration: "Jan 2022 - Jan 2022",
-    content: [
-      {
-        text: "Mentored 150+ students in a month-long Web Development and Ruby on Rails Bootcamp",
-        link: "https://github.com/IRIS-NITK/IRIS-RoR-Bootcamp-2021",
-      },
-    ],
-    logo: iris,
-  },
-  {
-    id: 5,
-    organisation: "E-Cell, NITK",
-    title: "Executive Member",
-    duration: "Sep 2021 - Apr 2022",
-    content: [
-      {
-        text: "Organised the season 3 of the E-Cell NITK Podcast",
-        link: "https://www.youtube.com/watch?v=uA-Yrk6bVDc",
-      },
-      {
-        text: "Member of the Sponsorship and E-Talks team for E-Summit'22",
-        link: "",
-      },
-    ],
-    logo: ecell,
-  },
-];
+export const extraCurricular = [];
 
-// Links to your social media profiles
 export const socialMedia = [
   {
     id: "social-media-1",
     icon: AiFillLinkedin,
-    link: "https://www.linkedin.com/in/mittal-parth",
+    link: "https://www.linkedin.com/in/juan-higuera-mohedano-189934232/",
   },
   {
     id: "social-media-2",
     icon: AiFillGithub,
-    link: "https://www.github.com/mittal-parth",
+    link: "https://github.com/juannhm02",
   },
   {
     id: "social-media-3",
     icon: AiFillMail,
-    link: "mailto:work.parthmittal@gmail.com",
+    link: "mailto:juanhmohedano123@gmail.com",
   },
-  {
-    id: "social-media-4",
-    icon: AiOutlineTwitter,
-    link: "https://www.twitter.com/mittalparth_",
-  }
 ];
 
-// Your professional summary
 export const aboutMe = {
-  name: "Parth Mittal",
-  githubUsername: "mittal-parth",
+  name: "Juan Higuera Mohedano",
+  githubUsername: "juannhm02",
+  profileImage: "https://github.com/juannhm02.png",
   tagLine:
-    "MTS @ Oracle | 12x Hackathon Winner | ETHIndia'22,24 Winner | NITK'24 | PBA-5",
+    "Frontend Developer | React & JavaScript | University of Cordoba | Former Genially Intern",
   intro:
-    "Software Developer from India who is either busy improving his craft or pondering over the next big idea.",
+    "Frontend developer with a solid software engineering foundation and hands-on experience building polished interfaces, web applications, and full-stack projects.",
 };
 
-// The maximum number of PRs to be displayed in the Open Source Contributions section.
 export const itemsToFetch = 20;
 
-// Add names of GitHub repos you'd like to display open source contributions from in the 'org/repo' format.
-export const includedRepos = [
-  "publiclab/plots2",
-  "zulip/zulip",
-  "paritytech/polkadot-sdk",
-];
+export const includedRepos = [];

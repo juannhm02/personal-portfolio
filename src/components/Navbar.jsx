@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import { close, parthmittal, menu } from "../assets";
-import { navLinks } from "../constants";
+import { close, menu } from "../assets";
+import { aboutMe, navLinks } from "../constants";
 import { scrollToSection } from "../lib/helperFunctions";
 import { motion } from "framer-motion";
 
@@ -31,13 +31,18 @@ const Navbar = () => {
       className="nav-styles sm:px-16 px-6"
     >
       {/* Logo */}
-      <a href="#home">
-        <img
-          src={parthmittal}
-          alt="Parth Mittal"
-          className="w-[80px] h-[80px]"
-        />
-      </a>
+      <button
+        type="button"
+        onClick={() => scrollToSection("home")}
+        className="flex items-center gap-3"
+      >
+        <div className="w-11 h-11 rounded-full border border-teal-200 text-teal-200 flex items-center justify-center font-poppins font-semibold">
+          JH
+        </div>
+        <span className="hidden md:block font-poppins text-white text-sm text-left">
+          {aboutMe.name}
+        </span>
+      </button>
 
       {/* List of links */}
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 p-4">
@@ -84,8 +89,12 @@ const Navbar = () => {
                 text-[16px]
                 ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}
                 text-white`}
+                onClick={() => {
+                  scrollToSection(nav.id);
+                  setToggle(false);
+                }}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                {nav.title}
               </li>
             ))}
           </ul>

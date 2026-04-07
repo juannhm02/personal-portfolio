@@ -1,7 +1,8 @@
 import React from "react";
+import { BsLink45Deg } from "react-icons/bs";
+import { motion } from "framer-motion";
 import { experiences, skills } from "../constants";
 import { layout } from "../style";
-import { motion } from "framer-motion";
 
 export const SkillIcon = ({ icon, name }) => {
   return (
@@ -44,11 +45,11 @@ const Content = ({ text, link }) => {
       <p className="font-poppins font-normal text-[14px] text-dimWhite mt-4">
         {text}{" "}
         {link ? (
-          <a href={link} target="_blank">
+          <a href={link} target="_blank" rel="noopener noreferrer">
             <BsLink45Deg
               size="1rem"
               className="inline hover:text-teal-200"
-            ></BsLink45Deg>
+            />
           </a>
         ) : (
           ""
@@ -67,11 +68,13 @@ const ExperienceCard = (props) => {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       <div className="flex flex-row items-center mb-6">
-        <img
-          src={props.logo}
-          alt={props.organisation}
-          className="w-[52px] h-[52px] rounded-full z-[2]"
-        />
+        <div className="w-[52px] h-[52px] rounded-full z-[2] bg-dimBlue flex items-center justify-center overflow-hidden shrink-0">
+          <img
+            src={props.logo}
+            alt={props.organisation}
+            className="w-[78%] h-[78%] object-contain"
+          />
+        </div>
         <h4 className="font-poppins font-semibold text-[20px] text-gradient leading-[32px] ml-2">
           {props.organisation}
         </h4>
@@ -91,8 +94,8 @@ const ExperienceCard = (props) => {
             <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               {position.duration}
             </time>
-            {position.content.map((info, index) => (
-              <Content key={index} index={index} {...info} />
+            {position.content.map((info, itemIndex) => (
+              <Content key={itemIndex} {...info} />
             ))}
             <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"></p>
           </li>
@@ -108,17 +111,13 @@ const SkillsAndExperience = () => {
       <h1 className="flex-1 font-poppins font-semibold ss:text-[55px] text-[45px] text-white ss:leading-[80px] leading-[80px]">
         Skills & Experience
       </h1>
-      <div
-        className={layout.section}
-      >
-        {/* Skills */}
+      <div className={layout.section}>
         <motion.div className={`ml-2 mb-6 ${layout.sectionInfo}`}>
           {skills.map((skill, index) => (
             <SkillCard key={index} index={index} {...skill} />
           ))}
         </motion.div>
 
-        {/* Experience */}
         <motion.div className="flex flex-1 items-center justify-start flex-col">
           {experiences.map((exp, index) => (
             <ExperienceCard key={index} index={index} {...exp} />

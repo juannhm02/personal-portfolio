@@ -27,7 +27,7 @@ const Hero = () => {
         {/* Hero text */}
         <div className="flex flex-row justify-between items-center w-full text-white">
           <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[80px] leading-[80px]">
-            Hi there!
+            Hello,
             <br className="sm:block hidden" /> I am
           </h1>
 
@@ -39,6 +39,9 @@ const Hero = () => {
         <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[80px] leading-[80px] w-full">
           <span className="text-gradient">{aboutMe.name}</span>
         </h1>
+        <p className="font-poppins text-[18px] text-teal-200 mt-4 max-w-[720px]">
+          {aboutMe.tagLine}
+        </p>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           {aboutMe.intro}
         </p>
