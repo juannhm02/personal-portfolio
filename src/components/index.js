@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import Education from "./Education";
 import SkillsAndExperience from "./SkillsAndExperience";
+import Certifications from "./Certifications";
 import Projects from "./Projects";
 import OpenSource from "./OpenSource";
 import ExtraCurricular from "./ExtraCurricular";
@@ -20,6 +21,7 @@ export {
     Hero,
     Education,
     SkillsAndExperience,
+    Certifications,
     Projects,
     OpenSource,
     ExtraCurricular,

@@ -7,10 +7,12 @@ import {
   Hero,
   Education,
   SkillsAndExperience,
+  Certifications,
   Footer,
   Projects,
   Loading,
   Achievements,
+  ExtraCurricular,
 } from "./components";
 
 const App = () => {
@@ -53,6 +55,7 @@ const App = () => {
               <div className={`${styles.boxWidth}`}>
                 <SkillsAndExperience />
                 <Education />
+                <Certifications />
               </div>
             </div>
             <Achievements />
@@ -60,6 +63,7 @@ const App = () => {
               className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}
             >
               <div className={`${styles.boxWidth}`}>
+                <ExtraCurricular />
                 <Projects />
               </div>
             </div>

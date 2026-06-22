@@ -7,9 +7,12 @@ import {
 import {
   SiC,
   SiCplusplus,
+  SiCss3,
   SiDjango,
   SiDocker,
+  SiExpo,
   SiExpress,
+  SiFirebase,
   SiGit,
   SiJavascript,
   SiMariadb,
@@ -27,7 +30,7 @@ import { DiJava } from "react-icons/di";
 import { ucoLogoOfficial } from "../assets";
 
 export const resumeLink = "/CV_Tecnico_Juan_Higuera.pdf";
-export const repoLink = "https://github.com/juannhm02/personalPortfolio";
+export const repoLink = "https://github.com/juannhm02/personal-portfolio";
 export const callToAction =
   "https://www.linkedin.com/in/juan-higuera-mohedano-189934232/";
 
@@ -41,8 +44,16 @@ export const navLinks = [
     title: "Education",
   },
   {
+    id: "certifications",
+    title: "Certifications",
+  },
+  {
     id: "achievements",
     title: "Highlights",
+  },
+  {
+    id: "extraCurricular",
+    title: "Leadership",
   },
   {
     id: "projects",
@@ -57,14 +68,78 @@ export const navLinks = [
 export const educationList = [
   {
     id: "education-1",
+    icon: "https://www.google.com/s2/favicons?domain=eiposgrados.com&sz=64",
+    title: "EIP International Business School",
+    degree:
+      "MSc in Cybersecurity Management, Ethical Hacking & Offensive Security",
+    duration: "Jun 2026 - Present",
+    content1:
+      "Postgraduate program covering security management, ethical hacking, and offensive security techniques.",
+    content2:
+      "Building on a software engineering background to specialize in cybersecurity.",
+  },
+  {
+    id: "education-2",
     icon: ucoLogoOfficial,
     title: "University of Cordoba",
     degree: "BSc in Computer Engineering",
-    duration: "University education",
+    duration: "Sep 2020 - Jun 2026",
     content1:
       "Strong technical foundation in web development, software engineering, and collaborative work.",
     content2:
       "Track record combining academic projects, digital product work, and student representation.",
+  },
+];
+
+export const certifications = [
+  {
+    id: "cert-1",
+    title: "AI Mastery Certificate",
+    issuer: "Udemy",
+    date: "Mar 2026",
+    link: "https://drive.google.com/file/d/1LU7FlugCFFKDbV0LbE58SmDe5x-0coKO/view",
+  },
+  {
+    id: "cert-2",
+    title: "Quantum Computing Certificate",
+    issuer: "Udemy",
+    date: "Mar 2026",
+    link: "https://drive.google.com/file/d/1T9_kT7G1RKO53tgUJwBoZ1E8wcUBuxHk/view?usp=drivesdk",
+  },
+  {
+    id: "cert-3",
+    title: "Digital Marketing Certificate",
+    issuer: "Next Generation EU",
+    date: "Feb 2026",
+    link: "https://drive.google.com/file/d/1h9VBznOBbynIvOfCH_2cxhZLRYzIR3cE/view",
+  },
+  {
+    id: "cert-4",
+    title: "Cybersecurity Introduction Certificate",
+    issuer: "Next Generation EU",
+    date: "Jan 2026",
+    link: "https://drive.google.com/file/d/1GUB2iX6yOwVyzgKNlOvu7INDzKxhTmzH/view",
+  },
+  {
+    id: "cert-5",
+    title: "Web Positioning (SEO) Certificate",
+    issuer: "CertiOne",
+    date: "Nov 2025",
+    link: "https://drive.google.com/file/d/1DOeco9uaJsrIk-INc3jEWv6gnHqPsKfk/view",
+  },
+  {
+    id: "cert-6",
+    title: "AI Development Certificate",
+    issuer: "Big School",
+    date: "Oct 2025",
+    link: "https://drive.google.com/file/d/16bMbt2awODw6WWuBSuecSir9Kg163pqJ/view?usp=drive_link",
+  },
+  {
+    id: "cert-7",
+    title: "Scrum Methodology Certificate",
+    issuer: "CertiOne",
+    date: "Nov 2025",
+    link: "https://drive.google.com/file/d/1HpNdxBNFD8etGFu6cnnnufdELyNQfubj/view",
   },
 ];
 
@@ -73,11 +148,11 @@ export const achievements = [
     id: "a-1",
     icon: "https://www.google.com/s2/favicons?domain=genial.ly&sz=64",
     event: "Genially",
-    position: "Frontend Developer Intern",
+    position: "Frontend Developer",
     content1:
-      "Product experience working with React and JavaScript in a real-world environment.",
+      "Jan 2024 - Jun 2025. Built and maintained React & JavaScript components in a real production environment.",
     content2:
-      "Focused on clean, maintainable, user-oriented interfaces.",
+      "Worked in a team, took part in joint project planning, and fixed reported issues.",
     article: "https://genial.ly/",
     github: "https://github.com/juannhm02/frontend-code-test",
   },
@@ -87,7 +162,7 @@ export const achievements = [
     event: "EPSC Student Council - UCO",
     position: "President",
     content1:
-      "Public student representation role at the School of Engineering of the University of Cordoba.",
+      "Sep 2023 - Jun 2025. Public student representation role at the School of Engineering of the University of Cordoba.",
     content2:
       "Profile combining software development, communication, and university leadership.",
     article:
@@ -186,6 +261,11 @@ export const skills = [
         icon: SiDjango,
         name: "Django",
       },
+      {
+        id: "f-8",
+        icon: SiExpo,
+        name: "Expo",
+      },
     ],
   },
   {
@@ -221,6 +301,11 @@ export const skills = [
         icon: SiMongodb,
         name: "MongoDB",
       },
+      {
+        id: "t-7",
+        icon: SiFirebase,
+        name: "Firebase",
+      },
     ],
   },
 ];
@@ -232,15 +317,15 @@ export const experiences = [
     link: "https://genial.ly/",
     positions: [
       {
-        title: "Frontend Developer Intern",
-        duration: "Internship experience",
+        title: "Frontend Developer",
+        duration: "Jan 2024 - Jun 2025",
         content: [
           {
-            text: "Worked with React and JavaScript inside a real digital product environment.",
+            text: "Built and implemented React & JavaScript components within a real digital product.",
             link: "",
           },
           {
-            text: "Exposure to interface decisions, maintainability, and user-experience-driven development.",
+            text: "Worked in a team on joint project planning and fixed reported issues.",
             link: "",
           },
         ],
@@ -255,7 +340,7 @@ export const experiences = [
     positions: [
       {
         title: "President",
-        duration: "Since October 2024",
+        duration: "Sep 2023 - Jun 2025",
         content: [
           {
             text: "Student representation and institutional participation at the School of Engineering in Cordoba.",
@@ -300,7 +385,7 @@ export const projects = [
     github: "https://github.com/juannhm02/totustuus-web",
     image: "https://opengraph.githubassets.com/1/juannhm02/totustuus-web",
     content:
-      "E-commerce site built with React and Vite, backed by Express for orders, automated emails, and an admin panel.",
+      "E-commerce site built as a Node.js monorepo: React (Vite) frontend, Express REST API, and an admin panel with order management, transactional emails, and server-side price validation.",
     stack: [
       {
         id: "proj1-icon-1",
@@ -326,11 +411,11 @@ export const projects = [
   },
   {
     id: "project-2",
-    title: "APP-ISM",
-    github: "https://github.com/juannhm02/APP-ISMFront",
-    image: "https://opengraph.githubassets.com/1/juannhm02/APP-ISMFront",
+    title: "Aquashift",
+    github: "https://github.com/juannhm02/aquashift",
+    image: "https://opengraph.githubassets.com/1/juannhm02/aquashift",
     content:
-      "Mobile application built with React Native and TypeScript for management workflows, authentication, barcode scanning, and user flows.",
+      "Shift-scheduling app for municipal pool lifeguards: manages schedules and shift swaps, with real-time notifications powered by Firestore.",
     stack: [
       {
         id: "proj2-icon-1",
@@ -339,28 +424,33 @@ export const projects = [
       },
       {
         id: "proj2-icon-2",
+        icon: SiExpo,
+        name: "Expo",
+      },
+      {
+        id: "proj2-icon-3",
         icon: SiTypescript,
         name: "TypeScript",
       },
       {
-        id: "proj2-icon-3",
-        icon: SiNodedotjs,
-        name: "Node.js",
+        id: "proj2-icon-4",
+        icon: SiFirebase,
+        name: "Firestore",
       },
     ],
   },
   {
     id: "project-3",
-    title: "UcoLib",
-    github: "https://github.com/juannhm02/UcoLib",
-    image: "https://opengraph.githubassets.com/1/juannhm02/UcoLib",
+    title: "APP-ISM",
+    github: "https://github.com/juannhm02/APP-ISMFront",
+    image: "https://opengraph.githubassets.com/1/juannhm02/APP-ISMFront",
     content:
-      "Modular backend with NestJS and TypeScript, designed for scalable services and Docker-based deployment.",
+      "Mobile application built with React Native and TypeScript for management workflows, authentication, barcode scanning, and user flows.",
     stack: [
       {
         id: "proj3-icon-1",
-        icon: SiNestjs,
-        name: "NestJS",
+        icon: SiReact,
+        name: "React Native",
       },
       {
         id: "proj3-icon-2",
@@ -369,11 +459,6 @@ export const projects = [
       },
       {
         id: "proj3-icon-3",
-        icon: SiDocker,
-        name: "Docker",
-      },
-      {
-        id: "proj3-icon-4",
         icon: SiNodedotjs,
         name: "Node.js",
       },
@@ -381,6 +466,36 @@ export const projects = [
   },
   {
     id: "project-4",
+    title: "UcoLib",
+    github: "https://github.com/juannhm02/UcoLib",
+    image: "https://opengraph.githubassets.com/1/juannhm02/UcoLib",
+    content:
+      "Modular backend with NestJS and TypeScript, designed for scalable services and Docker-based deployment.",
+    stack: [
+      {
+        id: "proj4-icon-1",
+        icon: SiNestjs,
+        name: "NestJS",
+      },
+      {
+        id: "proj4-icon-2",
+        icon: SiTypescript,
+        name: "TypeScript",
+      },
+      {
+        id: "proj4-icon-3",
+        icon: SiDocker,
+        name: "Docker",
+      },
+      {
+        id: "proj4-icon-4",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+    ],
+  },
+  {
+    id: "project-5",
     title: "Countrle",
     github: "https://github.com/juannhm02/Countrle",
     link: "https://countrle.netlify.app",
@@ -389,19 +504,76 @@ export const projects = [
       "Wordle-inspired web game combining Django and React for an interactive experience around countries and general knowledge.",
     stack: [
       {
-        id: "proj4-icon-1",
+        id: "proj5-icon-1",
         icon: SiDjango,
         name: "Django",
       },
       {
-        id: "proj4-icon-2",
+        id: "proj5-icon-2",
         icon: SiReact,
         name: "React",
       },
       {
-        id: "proj4-icon-3",
+        id: "proj5-icon-3",
         icon: SiMongodb,
         name: "MongoDB",
+      },
+    ],
+  },
+  {
+    id: "project-6",
+    title: "Reserva de Pistas",
+    github: "https://github.com/juannhm02/ReservaPistas",
+    image: "https://opengraph.githubassets.com/1/juannhm02/ReservaPistas",
+    content:
+      "Sports court booking manager with a domain model of 5 related entities, binary object persistence in Java, and a Handler pattern separating business logic.",
+    stack: [
+      {
+        id: "proj6-icon-1",
+        icon: DiJava,
+        name: "Java",
+      },
+      {
+        id: "proj6-icon-2",
+        icon: SiJavascript,
+        name: "JavaScript",
+      },
+      {
+        id: "proj6-icon-3",
+        icon: SiCss3,
+        name: "CSS",
+      },
+    ],
+  },
+  {
+    id: "project-7",
+    title: "Mailing Actividades Extracurriculares",
+    github:
+      "https://github.com/juannhm02/MailingActividadesExtracurriculares",
+    image:
+      "https://opengraph.githubassets.com/1/juannhm02/MailingActividadesExtracurriculares",
+    content:
+      "Mailing management tool built to coordinate communications for extracurricular and student-representation activities.",
+    stack: [
+      {
+        id: "proj7-icon-1",
+        icon: SiCplusplus,
+        name: "C++",
+      },
+    ],
+  },
+  {
+    id: "project-8",
+    title: "Gestor de Maquinas",
+    github: "https://github.com/juannhm02/Gestor-de-maquinas",
+    image: "https://opengraph.githubassets.com/1/juannhm02/Gestor-de-maquinas",
+    content:
+      "Cluster reservation system built in C++ for a university systems course.",
+    stack: [
+      {
+        id: "proj8-icon-1",
+        icon: SiCplusplus,
+        name: "C++",
       },
     ],
   },
@@ -427,7 +599,55 @@ export const stats = [
   },
 ];
 
-export const extraCurricular = [];
+export const extraCurricular = [
+  {
+    id: "ec-1",
+    organisation: "AICO Association",
+    title: "Founding Vice President",
+    duration: "Sep 2024 - Jun 2025",
+    logo: ucoLogoOfficial,
+    content: [
+      {
+        text: "Drafted the association's bylaws and representative policies.",
+        link: "",
+      },
+      {
+        text: "Promoted and coordinated academic and professional events.",
+        link: "",
+      },
+    ],
+  },
+  {
+    id: "ec-2",
+    organisation: "Student Council, University of Cordoba (CEUCO)",
+    title: "Institutional Representative",
+    duration: "Sep 2022 - Jun 2024",
+    logo: ucoLogoOfficial,
+    content: [
+      {
+        text: "Presented faculty interests at university governing board meetings.",
+        link: "",
+      },
+      {
+        text: "Strategic communication and report writing for institutional bodies.",
+        link: "",
+      },
+    ],
+  },
+  {
+    id: "ec-3",
+    organisation: "RITSI - National Computer Engineering Students Council",
+    title: "Institutional Representative",
+    duration: "Sep 2021 - Jun 2023",
+    logo: ucoLogoOfficial,
+    content: [
+      {
+        text: "Attended national assemblies and forums promoting research, development, and education across the sector.",
+        link: "",
+      },
+    ],
+  },
+];
 
 export const socialMedia = [
   {
@@ -443,7 +663,7 @@ export const socialMedia = [
   {
     id: "social-media-3",
     icon: AiFillMail,
-    link: "mailto:juanhmohedano123@gmail.com",
+    link: "mailto:correojhm.dev@gmail.com",
   },
 ];
 
@@ -452,9 +672,9 @@ export const aboutMe = {
   githubUsername: "juannhm02",
   profileImage: "https://github.com/juannhm02.png",
   tagLine:
-    "Frontend Developer | React & JavaScript | University of Cordoba | Former Genially Intern",
+    "Software Developer | React & Cybersecurity | University of Cordoba",
   intro:
-    "Frontend developer with a solid software engineering foundation and hands-on experience building polished interfaces, web applications, and full-stack projects.",
+    "Computer Engineering graduate from the University of Cordoba, now pursuing a Master's in Cybersecurity, Ethical Hacking & Offensive Security. Frontend-focused developer with hands-on experience building polished interfaces and full-stack projects across React, Node.js, and Python.",
 };
 
 export const itemsToFetch = 20;
