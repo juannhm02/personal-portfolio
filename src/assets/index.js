@@ -54,7 +54,6 @@ import gallery10 from "./gallery/gallery-10.jpg";
 import gallery11 from "./gallery/gallery-11.jpg";
 import gallery12 from "./gallery/gallery-12.jpg";
 import gallery13 from "./gallery/gallery-13.jpg";
-import gallery14 from "./gallery/gallery-14.jpg";
 import gallery15 from "./gallery/gallery-15.jpg";
 import gallery16 from "./gallery/gallery-16.jpg";
 import gallery17 from "./gallery/gallery-17.jpg";
@@ -84,7 +83,7 @@ import gallery39 from "./gallery/gallery-39.jpg";
 const galleryImages = [
   gallery01, gallery02, gallery03, gallery04, gallery05,
   gallery06, gallery07, gallery08, gallery09, gallery10,
-  gallery11, gallery12, gallery13, gallery14, gallery15,
+  gallery11, gallery12, gallery13, gallery15,
   gallery16, gallery17, gallery18, gallery19, gallery20,
   gallery21, gallery22, gallery23, gallery24, gallery25,
   gallery26, gallery27, gallery28, gallery29, gallery30,
