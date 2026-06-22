@@ -28,7 +28,7 @@ import {
   SiVite,
 } from "react-icons/si";
 import { DiJava } from "react-icons/di";
-import { ucoLogoOfficial } from "../assets";
+import { ucoLogoOfficial, contactPhoto, galleryImages } from "../assets";
 
 export const resumeLink = "/HigueraMohedanoCV_120626.pdf";
 export const repoLink = "https://github.com/juannhm02/personal-portfolio";
@@ -59,6 +59,10 @@ export const navLinks = [
   {
     id: "projects",
     title: "Projects",
+  },
+  {
+    id: "gallery",
+    title: "Gallery",
   },
   {
     id: "contactMe",
@@ -673,10 +677,15 @@ export const socialMedia = [
   },
 ];
 
+export const gallery = galleryImages.map((image, index) => ({
+  id: `gallery-${index + 1}`,
+  image,
+}));
+
 export const aboutMe = {
   name: "Juan Higuera Mohedano",
   githubUsername: "juannhm02",
-  profileImage: "https://github.com/juannhm02.png",
+  profileImage: contactPhoto,
   tagLine:
     "Software Developer | React & Cybersecurity | University of Cordoba",
   intro:

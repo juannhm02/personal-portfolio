@@ -13,6 +13,7 @@ import {
   Loading,
   Achievements,
   ExtraCurricular,
+  Gallery,
 } from "./components";
 
 const App = () => {
@@ -65,6 +66,13 @@ const App = () => {
               <div className={`${styles.boxWidth}`}>
                 <ExtraCurricular />
                 <Projects />
+              </div>
+            </div>
+            <div
+              className={`bg-primary ${styles.flexCenter} ${styles.paddingX}`}
+            >
+              <div className={`${styles.boxWidth}`}>
+                <Gallery />
               </div>
             </div>
             <Footer />
