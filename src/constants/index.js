@@ -4,6 +4,7 @@ import {
   AiFillMail,
   AiFillHtml5,
 } from "react-icons/ai";
+import { BsTelephoneFill } from "react-icons/bs";
 import {
   SiC,
   SiCplusplus,
@@ -29,7 +30,7 @@ import {
 import { DiJava } from "react-icons/di";
 import { ucoLogoOfficial } from "../assets";
 
-export const resumeLink = "/CV_Tecnico_Juan_Higuera.pdf";
+export const resumeLink = "/HigueraMohedanoCV_120626.pdf";
 export const repoLink = "https://github.com/juannhm02/personal-portfolio";
 export const callToAction =
   "https://www.linkedin.com/in/juan-higuera-mohedano-189934232/";
@@ -664,6 +665,11 @@ export const socialMedia = [
     id: "social-media-3",
     icon: AiFillMail,
     link: "mailto:correojhm.dev@gmail.com",
+  },
+  {
+    id: "social-media-4",
+    icon: BsTelephoneFill,
+    link: "tel:+34684054282",
   },
 ];
 
