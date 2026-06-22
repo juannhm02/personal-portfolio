@@ -54,7 +54,7 @@ const Footer = () => (
         <img
           src={aboutMe.profileImage}
           alt={aboutMe.name}
-          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full"
+          className="w-[200px] h-[200px] border-2 border-teal-200 relative z-[5] rounded-full object-cover"
         />
       </div>
     </div>
