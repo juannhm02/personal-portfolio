@@ -4,7 +4,7 @@ Personal portfolio built with React and Vite to showcase my projects, experience
 
 ## Live Site :globe_with_meridians:
 
-- https://personal-portfolio-azure.vercel.app
+- https://www.juanhiguera.es
 
 ## Tech Stack :gear:
 
