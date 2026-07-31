@@ -79,6 +79,11 @@ import gallery36 from "./gallery/gallery-36.jpg";
 import gallery37 from "./gallery/gallery-37.jpg";
 import gallery38 from "./gallery/gallery-38.jpg";
 import gallery39 from "./gallery/gallery-39.jpg";
+import gallery40 from "./gallery/gallery-40.jpg";
+import gallery41 from "./gallery/gallery-41.jpg";
+import gallery42 from "./gallery/gallery-42.jpg";
+import gallery43 from "./gallery/gallery-43.jpg";
+import gallery44 from "./gallery/gallery-44.jpg";
 
 const galleryImages = [
   gallery01, gallery02, gallery03, gallery04, gallery05,
@@ -89,6 +94,7 @@ const galleryImages = [
   gallery26, gallery27, gallery28, gallery29, gallery30,
   gallery31, gallery32, gallery33, gallery34, gallery35,
   gallery36, gallery37, gallery38, gallery39,
+  gallery40, gallery41, gallery42, gallery43, gallery44,
 ];
 
 export {
