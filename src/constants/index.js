@@ -72,6 +72,17 @@ export const navLinks = [
 
 export const educationList = [
   {
+    id: "education-0",
+    icon: "https://www.google.com/s2/favicons?domain=loyola.es&sz=64",
+    title: "Universidad Loyola",
+    degree: "MSc in Artificial Intelligence",
+    duration: "Sep 2026 - Jul 2027",
+    content1:
+      "Postgraduate program specializing in artificial intelligence and machine learning.",
+    content2:
+      "Complementing cybersecurity expertise with deep knowledge in AI systems.",
+  },
+  {
     id: "education-1",
     icon: "https://www.google.com/s2/favicons?domain=eiposgrados.com&sz=64",
     title: "EIP International Business School",
@@ -155,7 +166,7 @@ export const achievements = [
     event: "Genially",
     position: "Frontend Developer",
     content1:
-      "Jan 2024 - Jun 2025. Built and maintained React & JavaScript components in a real production environment.",
+      "Oct 2024 - Nov 2025. Built and maintained React & JavaScript components in a real production environment.",
     content2:
       "Worked in a team, took part in joint project planning, and fixed reported issues.",
     article: "https://genial.ly/",
@@ -167,7 +178,7 @@ export const achievements = [
     event: "EPSC Student Council - UCO",
     position: "President",
     content1:
-      "Sep 2023 - Jun 2025. Public student representation role at the School of Engineering of the University of Cordoba.",
+      "Oct 2023 - Sep 2025. Public student representation role at the School of Engineering of the University of Cordoba.",
     content2:
       "Profile combining software development, communication, and university leadership.",
     article:
@@ -323,7 +334,7 @@ export const experiences = [
     positions: [
       {
         title: "Frontend Developer",
-        duration: "Jan 2024 - Jun 2025",
+        duration: "Oct 2024 - Nov 2025",
         content: [
           {
             text: "Built and implemented React & JavaScript components within a real digital product.",
@@ -345,7 +356,7 @@ export const experiences = [
     positions: [
       {
         title: "President",
-        duration: "Sep 2023 - Jun 2025",
+        duration: "Oct 2023 - Sep 2025",
         content: [
           {
             text: "Student representation and institutional participation at the School of Engineering in Cordoba.",
@@ -384,6 +395,36 @@ export const experiences = [
 ];
 
 export const projects = [
+  {
+    id: "project-0",
+    title: "AgroInsight",
+    link: "https://www.agroinsight.es",
+    image: "https://www.agroinsight.es/icons/icon-512x512.png",
+    content:
+      "Plataforma SaaS de gestión ganadera inteligente: control de animales, registros sanitarios, módulo financiero e importación/exportación de datos en Excel y PDF. PWA con planes de suscripción en producción.",
+    stack: [
+      {
+        id: "proj0-icon-1",
+        icon: SiReact,
+        name: "React",
+      },
+      {
+        id: "proj0-icon-2",
+        icon: SiNodedotjs,
+        name: "Node.js",
+      },
+      {
+        id: "proj0-icon-3",
+        icon: SiExpress,
+        name: "Express",
+      },
+      {
+        id: "proj0-icon-4",
+        icon: SiMongodb,
+        name: "MongoDB",
+      },
+    ],
+  },
   {
     id: "project-1",
     title: "ToTusTuus Web",
@@ -609,7 +650,7 @@ export const extraCurricular = [
     id: "ec-1",
     organisation: "AICO Association",
     title: "Founding Vice President",
-    duration: "Sep 2024 - Jun 2025",
+    duration: "Jun 2024 - Sep 2025",
     logo: ucoLogoOfficial,
     content: [
       {
@@ -687,9 +728,9 @@ export const aboutMe = {
   githubUsername: "juannhm02",
   profileImage: contactPhoto,
   tagLine:
-    "Software Developer | React & Cybersecurity | University of Cordoba",
+    "Software Developer | React · AI · Cybersecurity",
   intro:
-    "Computer Engineering graduate from the University of Cordoba, now pursuing a Master's in Cybersecurity, Ethical Hacking & Offensive Security. Frontend-focused developer with hands-on experience building polished interfaces and full-stack projects across React, Node.js, and Python.",
+    "Computer Engineering graduate from the University of Cordoba, now pursuing a Master's in Cybersecurity (EIP) and a Master's in Artificial Intelligence (Universidad Loyola). Frontend-focused developer with hands-on experience building polished interfaces and full-stack projects across React, Node.js, and Python.",
 };
 
 export const itemsToFetch = 20;
