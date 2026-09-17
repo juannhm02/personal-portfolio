@@ -73,7 +73,7 @@ export const navLinks = [
 export const educationList = [
   {
     id: "education-0",
-    icon: "https://www.google.com/s2/favicons?domain=loyola.es&sz=64",
+    icon: "https://www.uloyola.es/templates/v6/images/isologo_loyola_principal.svg",
     title: "Universidad Loyola",
     degree: "MSc in Artificial Intelligence",
     duration: "Sep 2026 - Jul 2027",
