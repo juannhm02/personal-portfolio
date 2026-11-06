@@ -30,7 +30,7 @@ import {
 import { DiJava } from "react-icons/di";
 import { ucoLogoOfficial, contactPhoto, galleryImages } from "../assets";
 
-export const resumeLink = "/HigueraMohedanoCV_120626.pdf";
+export const resumeLink = "/HigueraMohedanoCV_200926.pdf";
 export const repoLink = "https://github.com/juannhm02/personal-portfolio";
 export const callToAction =
   "https://www.linkedin.com/in/juan-higuera-mohedano-189934232/";

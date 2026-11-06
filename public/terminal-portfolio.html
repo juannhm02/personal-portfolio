@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>juan@portfolio:~$</title>
+<title>Juan Higuera | Portfolio</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
   :root{--green:#00ff9f;--green-dim:#00cc7f;--green-dark:#003d26;--bg:#0a0e0a;--bg2:#0d120d;--grey:#8899aa;--white:#e0ffe8;--red:#ff4d6d;--blue:#5bc8f5;--yellow:#ffd166}
@@ -69,6 +69,10 @@
   #suggestions{max-width:860px;width:100%;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;padding:0 0 10px}
   .sug{background:#0d1a0d;border:1px solid #1e3a1e;color:var(--green-dim);padding:3px 10px;border-radius:4px;font-size:12px;cursor:pointer;font-family:inherit;transition:.2s}
   .sug:hover{background:#1a3a1a;border-color:var(--green);color:var(--green)}
+
+  /* OUTPUT ANIMATION */
+  .line-anim{opacity:0;transform:translateY(4px);animation:lineIn .18s ease forwards}
+  @keyframes lineIn{to{opacity:1;transform:translateY(0)}}
 
   /* SCROLLBAR */
   ::-webkit-scrollbar{width:6px}
@@ -227,14 +231,18 @@ const COMMANDS = {
     </div>`;
   },
   cv() {
-    window.open('/HigueraMohedanoCV_120626.pdf','_blank');
+    window.open('/HigueraMohedanoCV_200926.pdf','_blank');
     return `<div class="output out-comment">Opening CV...</div>`;
   },
   fullsite() {
     window.open('https://juanhiguera.es','_blank');
     return `<div class="output out-comment">Opening juanhiguera.es...</div>`;
   },
-  clear() { document.getElementById('history').innerHTML=''; return null; }
+  clear() {
+    document.getElementById('history').innerHTML='';
+    setTimeout(()=>addBlock('help', COMMANDS.help()), 50);
+    return null;
+  }
 };
 
 // ——— BOOT SEQUENCE ———
@@ -295,7 +303,13 @@ function addBlock(cmd, outputHTML) {
     </div>
     ${outputHTML}`;
   history.appendChild(block);
-  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+  // Animate each child line
+  const lines = block.querySelectorAll('.output > div, .output > br, .proj-card, .output > a');
+  lines.forEach((el, i) => {
+    el.classList.add('line-anim');
+    el.style.animationDelay = `${i * 40}ms`;
+  });
+  setTimeout(() => window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'}), lines.length * 40 + 50);
 }
 
 function runCmd(raw) {
