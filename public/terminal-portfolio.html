@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>juan@portfolio:~$</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--green:#00ff9f;--green-dim:#00cc7f;--green-dark:#003d26;--bg:#0a0e0a;--bg2:#0d120d;--grey:#8899aa;--white:#e0ffe8;--red:#ff4d6d;--blue:#5bc8f5;--yellow:#ffd166}
+  body{background:var(--bg);color:var(--green);font-family:'Courier New',Courier,monospace;font-size:14px;min-height:100vh;overflow-x:hidden}
+
+  /* TOPBAR */
+  #topbar{display:flex;align-items:center;justify-content:space-between;background:#1a1f1a;padding:8px 16px;border-bottom:1px solid #1e2e1e;position:sticky;top:0;z-index:100}
+  .dots{display:flex;gap:7px}
+  .dot{width:12px;height:12px;border-radius:50%}
+  .dot-r{background:#ff5f57}.dot-y{background:#febc2e}.dot-g{background:#28c840}
+  #topbar-title{color:var(--grey);font-size:12px}
+  #topbar-links{display:flex;gap:16px}
+  #topbar-links a{color:var(--grey);text-decoration:none;font-size:12px;transition:.2s}
+  #topbar-links a:hover{color:var(--green)}
+
+  /* TERMINAL */
+  #terminal{max-width:860px;margin:0 auto;padding:20px 16px 80px}
+
+  /* BOOT */
+  #boot{padding:12px 0}
+  .boot-line{color:var(--grey);font-size:12px;line-height:1.9;opacity:0;animation:fadeIn .05s forwards}
+  @keyframes fadeIn{to{opacity:1}}
+  .boot-ok{color:var(--green-dim)}
+  .boot-warn{color:var(--yellow)}
+
+  /* ASCII */
+  #ascii{color:var(--green);white-space:pre;font-size:clamp(5px,1.4vw,13px);line-height:1.15;margin:16px 0;text-shadow:0 0 8px var(--green)}
+
+  /* PROMPT AREA */
+  .block{margin-top:18px}
+  .prompt-line{display:flex;align-items:flex-start;gap:6px;flex-wrap:wrap}
+  .p-user{color:var(--green-dim)}.p-host{color:var(--blue)}.p-path{color:var(--yellow)}.p-dollar{color:var(--white)}
+  .p-cmd{color:var(--white)}
+
+  /* OUTPUT */
+  .output{margin-top:8px;padding-left:4px;line-height:1.9}
+  .out-comment{color:var(--grey)}
+  .out-key{color:var(--green-dim);min-width:120px;display:inline-block}
+  .out-val{color:var(--white)}
+  .out-link{color:var(--blue);text-decoration:none}
+  .out-link:hover{text-decoration:underline}
+  .out-title{color:var(--green);font-weight:bold;border-bottom:1px solid var(--green-dark);margin-bottom:6px;padding-bottom:2px}
+  .out-warn{color:var(--yellow)}
+  .out-err{color:var(--red)}
+  .tag{background:var(--green-dark);color:var(--green-dim);padding:1px 8px;border-radius:3px;font-size:12px;margin-right:4px}
+
+  /* PROJECTS GRID */
+  .proj-card{border:1px solid #1e3a1e;border-radius:6px;padding:12px;margin-top:8px;transition:.2s}
+  .proj-card:hover{border-color:var(--green-dim);background:#0d1a0d}
+  .proj-name{color:var(--green);font-weight:bold}
+  .proj-desc{color:var(--grey);font-size:13px;margin:4px 0}
+  .proj-link{color:var(--blue);text-decoration:none;font-size:12px}
+  .proj-link:hover{text-decoration:underline}
+
+  /* INPUT */
+  #input-row{display:flex;align-items:center;gap:6px;margin-top:18px;position:fixed;bottom:0;left:0;right:0;background:var(--bg);border-top:1px solid #1e2e1e;padding:12px 16px}
+  #input-inner{max-width:860px;width:100%;margin:0 auto;display:flex;align-items:center;gap:6px}
+  #cmd-input{background:transparent;border:none;outline:none;color:var(--white);font-family:inherit;font-size:14px;flex:1;caret-color:var(--green)}
+  #cursor{display:inline-block;width:8px;height:14px;background:var(--green);animation:blink .9s step-end infinite;vertical-align:middle;margin-left:1px}
+  @keyframes blink{50%{opacity:0}}
+
+  /* SUGGESTIONS */
+  #suggestions{max-width:860px;width:100%;margin:0 auto;display:flex;gap:8px;flex-wrap:wrap;padding:0 0 10px}
+  .sug{background:#0d1a0d;border:1px solid #1e3a1e;color:var(--green-dim);padding:3px 10px;border-radius:4px;font-size:12px;cursor:pointer;font-family:inherit;transition:.2s}
+  .sug:hover{background:#1a3a1a;border-color:var(--green);color:var(--green)}
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar{width:6px}
+  ::-webkit-scrollbar-track{background:var(--bg)}
+  ::-webkit-scrollbar-thumb{background:#1e3a1e;border-radius:3px}
+
+  /* MOBILE */
+  @media(max-width:600px){
+    #ascii{font-size:4px}
+    .out-key{min-width:90px}
+  }
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+  <span id="topbar-title">juan@portfolio: ~</span>
+  <div id="topbar-links">
+    <a href="https://juanhiguera.es" target="_blank">🌐 Full site</a>
+    <a href="https://github.com/juannhm02" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/juan-higuera-mohedano" target="_blank">LinkedIn</a>
+  </div>
+</div>
+
+<div id="terminal">
+  <div id="boot"></div>
+  <pre id="ascii"></pre>
+  <div id="history"></div>
+</div>
+
+<div id="input-row">
+  <div id="suggestions"></div>
+  <div id="input-inner">
+    <span class="p-user">juan</span><span style="color:var(--grey)">@</span><span class="p-host">portfolio</span><span style="color:var(--grey)">:</span><span class="p-path">~</span><span style="color:var(--grey)">$&nbsp;</span>
+    <input id="cmd-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="type a command..."/>
+    <span id="cursor"></span>
+  </div>
+</div>
+
+<script>
+const DATA = {
+  whoami: {
+    name: "Juan Higuera Mohedano",
+    role: "Software Developer",
+    focus: "React · Node.js · Cybersecurity · AI",
+    location: "Córdoba, Spain",
+    web: "https://juanhiguera.es",
+    email: "correojhm.dev@gmail.com",
+    bio: "Computer Engineering graduate (UCO). Pursuing MSc in Cybersecurity (EIP) + MSc in AI (Universidad Loyola). Frontend dev with experience at Genially."
+  },
+  skills: {
+    languages: ["JavaScript","TypeScript","Python","Java","C++","C"],
+    frontend: ["React","Vite","Tailwind CSS","Framer Motion","React Native","Expo"],
+    backend: ["Node.js","Express","NestJS","Django"],
+    databases: ["MongoDB","MySQL","MariaDB","Firebase"],
+    tools: ["Git","Docker","Vercel"]
+  },
+  experience: [
+    {role:"Frontend Developer",company:"Genially",period:"Oct 2024 – Nov 2025",desc:"Built React & JS components in a real production environment. Remote."},
+    {role:"Founding Vice President",company:"AICO Association",period:"Jun 2024 – Sep 2025",desc:"Drafted bylaws, coordinated academic events."},
+    {role:"President",company:"EPSC Student Council – UCO",period:"Oct 2023 – Sep 2025",desc:"Public student representation at the School of Engineering, UCO."},
+  ],
+  education: [
+    {title:"MSc in Artificial Intelligence",school:"Universidad Loyola",period:"Sep 2026 – Jul 2027"},
+    {title:"MSc in Cybersecurity, Ethical Hacking & Offensive Security",school:"EIP International Business School",period:"Jun 2026 – Present"},
+    {title:"BSc in Computer Engineering",school:"University of Córdoba",period:"Sep 2020 – Jun 2026"},
+  ],
+  projects: [
+    {name:"AgroInsight",desc:"SaaS livestock management platform with health records, financial module and real-time data. Live product.",link:"https://agroinsight.es",stack:"React · Node.js · Express · MongoDB"},
+    {name:"ToTusTuus Web",desc:"E-commerce Node.js monorepo: React frontend, Express REST API, admin panel.",link:"https://github.com/juannhm02/totustuus-web",stack:"React · Vite · Node.js · Express"},
+    {name:"Aquashift",desc:"Shift-scheduling app for municipal pool lifeguards with real-time Firestore notifications.",link:"https://github.com/juannhm02/aquashift",stack:"React Native · Expo · TypeScript · Firebase"},
+    {name:"APP-ISM",desc:"Mobile app for management workflows with authentication and barcode scanning.",link:"https://github.com/juannhm02/APP-ISMFront",stack:"React Native · TypeScript · Node.js"},
+    {name:"UcoLib",desc:"Modular NestJS backend designed for scalable services and Docker deployment.",link:"https://github.com/juannhm02/UcoLib",stack:"NestJS · TypeScript · Docker"},
+    {name:"Countrle",desc:"Wordle-inspired geography web game built with Django + React.",link:"https://countrle.netlify.app",stack:"Django · React · MongoDB"},
+  ],
+  contact: {
+    email: "correojhm.dev@gmail.com",
+    linkedin: "linkedin.com/in/juan-higuera-mohedano",
+    github: "github.com/juannhm02",
+    web: "juanhiguera.es"
+  }
+};
+
+const COMMANDS = {
+  help() {
+    return `<div class="output">
+      <div class="out-title">Available commands</div>
+      <div><span class="out-key">whoami</span><span class="out-comment">— who is Juan?</span></div>
+      <div><span class="out-key">skills</span><span class="out-comment">— tech stack</span></div>
+      <div><span class="out-key">experience</span><span class="out-comment">— work history</span></div>
+      <div><span class="out-key">education</span><span class="out-comment">— academic background</span></div>
+      <div><span class="out-key">projects</span><span class="out-comment">— featured projects</span></div>
+      <div><span class="out-key">contact</span><span class="out-comment">— get in touch</span></div>
+      <div><span class="out-key">cv</span><span class="out-comment">— open resume PDF</span></div>
+      <div><span class="out-key">clear</span><span class="out-comment">— clear terminal</span></div>
+      <div><span class="out-key">fullsite</span><span class="out-comment">— open juanhiguera.es</span></div>
+    </div>`;
+  },
+  whoami() {
+    const d = DATA.whoami;
+    return `<div class="output">
+      <div><span class="out-key">name</span><span class="out-val">${d.name}</span></div>
+      <div><span class="out-key">role</span><span class="out-val">${d.role}</span></div>
+      <div><span class="out-key">focus</span><span class="out-val">${d.focus}</span></div>
+      <div><span class="out-key">location</span><span class="out-val">${d.location}</span></div>
+      <div><span class="out-key">web</span><a class="out-link out-val" href="${d.web}" target="_blank">${d.web}</a></div>
+      <div><span class="out-key">email</span><span class="out-val">${d.email}</span></div>
+      <br/>
+      <div class="out-comment">${d.bio}</div>
+    </div>`;
+  },
+  skills() {
+    const s = DATA.skills;
+    const tags = arr => arr.map(x=>`<span class="tag">${x}</span>`).join('');
+    return `<div class="output">
+      <div><span class="out-key">Languages</span>${tags(s.languages)}</div>
+      <div style="margin-top:6px"><span class="out-key">Frontend</span>${tags(s.frontend)}</div>
+      <div style="margin-top:6px"><span class="out-key">Backend</span>${tags(s.backend)}</div>
+      <div style="margin-top:6px"><span class="out-key">Databases</span>${tags(s.databases)}</div>
+      <div style="margin-top:6px"><span class="out-key">Tools</span>${tags(s.tools)}</div>
+    </div>`;
+  },
+  experience() {
+    return `<div class="output">${DATA.experience.map(e=>`
+      <div style="margin-bottom:14px">
+        <div><span style="color:var(--green);font-weight:bold">${e.role}</span> <span class="out-comment">@ ${e.company}</span></div>
+        <div class="out-warn">${e.period}</div>
+        <div class="out-comment" style="font-size:13px">${e.desc}</div>
+      </div>`).join('')}</div>`;
+  },
+  education() {
+    return `<div class="output">${DATA.education.map(e=>`
+      <div style="margin-bottom:12px">
+        <div style="color:var(--green);font-weight:bold">${e.title}</div>
+        <div class="out-val">${e.school}</div>
+        <div class="out-warn">${e.period}</div>
+      </div>`).join('')}</div>`;
+  },
+  projects() {
+    return `<div class="output">${DATA.projects.map(p=>`
+      <div class="proj-card">
+        <div class="proj-name">${p.name}</div>
+        <div class="proj-desc">${p.desc}</div>
+        <div style="margin-top:4px">${p.stack.split(' · ').map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+        <a class="proj-link" href="${p.link}" target="_blank">→ ${p.link.includes('github')?'View on GitHub':'Live site'}</a>
+      </div>`).join('')}</div>`;
+  },
+  contact() {
+    const c = DATA.contact;
+    return `<div class="output">
+      <div><span class="out-key">email</span><a class="out-link" href="mailto:${c.email}">${c.email}</a></div>
+      <div><span class="out-key">linkedin</span><a class="out-link" href="https://${c.linkedin}" target="_blank">${c.linkedin}</a></div>
+      <div><span class="out-key">github</span><a class="out-link" href="https://${c.github}" target="_blank">${c.github}</a></div>
+      <div><span class="out-key">web</span><a class="out-link" href="https://${c.web}" target="_blank">${c.web}</a></div>
+    </div>`;
+  },
+  cv() {
+    window.open('/HigueraMohedanoCV_120626.pdf','_blank');
+    return `<div class="output out-comment">Opening CV...</div>`;
+  },
+  fullsite() {
+    window.open('https://juanhiguera.es','_blank');
+    return `<div class="output out-comment">Opening juanhiguera.es...</div>`;
+  },
+  clear() { document.getElementById('history').innerHTML=''; return null; }
+};
+
+// ——— BOOT SEQUENCE ———
+const bootLines = [
+  ['[  OK  ] Starting juan@portfolio...','ok'],
+  ['[  OK  ] Loading modules: react, node, python, java','ok'],
+  ['[  OK  ] Mounting /projects ... done','ok'],
+  ['[ WARN ] AgroInsight is live at agroinsight.es','warn'],
+  ['[  OK  ] MSc AI (Loyola) + MSc Cybersecurity (EIP) enrolled','ok'],
+  ['[  OK  ] GitHub: juannhm02 ... 15 repos loaded','ok'],
+  ['[  OK  ] Terminal ready. Type "help" to begin.','ok'],
+];
+
+const ASCII =
+`      ██╗██╗   ██╗ █████╗ ███╗   ██╗
+      ██║██║   ██║██╔══██╗████╗  ██║
+      ██║██║   ██║███████║██╔██╗ ██║
+ ██   ██║██║   ██║██╔══██║██║╚██╗██║
+ ╚█████╔╝╚██████╔╝██║  ██║██║ ╚████║
+  ╚════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝
+ higuera · mohedano · portfolio v2.0`;
+
+const SUGGESTIONS = ['whoami','skills','projects','experience','education','contact','cv','clear'];
+
+function runBoot() {
+  const bootEl = document.getElementById('boot');
+  bootLines.forEach((line, i) => {
+    setTimeout(() => {
+      const el = document.createElement('div');
+      el.className = 'boot-line';
+      el.style.animationDelay = '0s';
+      const cls = line[1]==='ok'?'boot-ok':'boot-warn';
+      el.innerHTML = `<span class="${cls}">${line[0]}</span>`;
+      bootEl.appendChild(el);
+    }, i * 90);
+  });
+  setTimeout(() => {
+    document.getElementById('ascii').textContent = ASCII;
+    renderSuggestions();
+    addBlock('help', COMMANDS.help());
+  }, bootLines.length * 90 + 200);
+}
+
+function renderSuggestions() {
+  const el = document.getElementById('suggestions');
+  el.innerHTML = SUGGESTIONS.map(s=>`<button class="sug" onclick="runCmd('${s}')">${s}</button>`).join('');
+}
+
+function addBlock(cmd, outputHTML) {
+  if(outputHTML === null) return;
+  const history = document.getElementById('history');
+  const block = document.createElement('div');
+  block.className = 'block';
+  block.innerHTML = `
+    <div class="prompt-line">
+      <span class="p-user">juan</span><span style="color:var(--grey)">@</span><span class="p-host">portfolio</span><span style="color:var(--grey)">:</span><span class="p-path">~</span><span style="color:var(--grey)">$</span>
+      <span class="p-cmd">&nbsp;${cmd}</span>
+    </div>
+    ${outputHTML}`;
+  history.appendChild(block);
+  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+}
+
+function runCmd(raw) {
+  const cmd = raw.trim().toLowerCase();
+  if(!cmd) return;
+  if(COMMANDS[cmd]) {
+    addBlock(cmd, COMMANDS[cmd]());
+  } else {
+    addBlock(cmd, `<div class="output out-err">command not found: ${cmd}. Try 'help'.</div>`);
+  }
+  document.getElementById('cmd-input').value = '';
+  document.getElementById('cmd-input').focus();
+}
+
+// INPUT
+const input = document.getElementById('cmd-input');
+input.addEventListener('keydown', e => { if(e.key==='Enter') runCmd(input.value); });
+
+// History navigation
+let hist = [], histIdx = -1;
+input.addEventListener('keydown', e => {
+  if(e.key==='ArrowUp') { if(hist.length){ histIdx=Math.min(histIdx+1,hist.length-1); input.value=hist[histIdx]; } e.preventDefault(); }
+  if(e.key==='ArrowDown') { histIdx=Math.max(histIdx-1,-1); input.value=histIdx<0?'':hist[histIdx]; e.preventDefault(); }
+});
+const origRun = runCmd;
+window.runCmd = function(raw){ if(raw.trim()){ hist.unshift(raw.trim()); histIdx=-1; } origRun(raw); };
+
+// Click anywhere → focus input
+document.getElementById('terminal').addEventListener('click', () => input.focus());
+
+// Auto-focus
+input.focus();
+runBoot();
+</script>
+</body>
+</html>
