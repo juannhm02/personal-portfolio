@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>404 | Juan Higuera</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--green:#00ff9f;--green-dim:#00cc7f;--green-dark:#003d26;--bg:#0a0e0a;--grey:#8899aa;--white:#e0ffe8;--red:#ff4d6d;--blue:#5bc8f5;--yellow:#ffd166}
+  body{background:var(--bg);color:var(--green);font-family:'Courier New',Courier,monospace;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px}
+  #topbar{position:fixed;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;background:#1a1f1a;padding:8px 16px;border-bottom:1px solid #1e2e1e}
+  .dots{display:flex;gap:7px}
+  .dot{width:12px;height:12px;border-radius:50%}
+  .dot-r{background:#ff5f57}.dot-y{background:#febc2e}.dot-g{background:#28c840}
+  #topbar-title{color:var(--grey);font-size:12px}
+  #topbar-links{display:flex;gap:16px}
+  #topbar-links a{color:var(--grey);text-decoration:none;font-size:12px;transition:.2s}
+  #topbar-links a:hover{color:var(--green)}
+  #box{text-align:center;max-width:600px}
+  pre#art{color:var(--red);white-space:pre;font-size:clamp(6px,2vw,15px);line-height:1.2;text-shadow:0 0 10px var(--red);margin-bottom:28px}
+  .label{color:var(--grey);font-size:13px;margin-bottom:6px}
+  .code{color:var(--red);font-size:clamp(32px,8vw,72px);font-weight:bold;text-shadow:0 0 20px var(--red);letter-spacing:4px;margin-bottom:8px}
+  .msg{color:var(--white);font-size:14px;margin-bottom:6px}
+  .sub{color:var(--grey);font-size:12px;margin-bottom:32px}
+  .prompt-line{color:var(--grey);font-size:13px;margin-bottom:20px}
+  .prompt-line span{color:var(--green-dim)}
+  .prompt-line .cmd{color:var(--white)}
+  .buttons{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+  .btn{background:#0d1a0d;border:1px solid #1e3a1e;color:var(--green-dim);padding:8px 20px;border-radius:4px;font-size:13px;cursor:pointer;font-family:inherit;text-decoration:none;transition:.2s}
+  .btn:hover{background:#1a3a1a;border-color:var(--green);color:var(--green)}
+  .btn-home{border-color:var(--green-dim);color:var(--green)}
+  @keyframes blink{50%{opacity:0}}
+  #cursor{display:inline-block;width:7px;height:12px;background:var(--green);animation:blink .9s step-end infinite;vertical-align:middle}
+</style>
+</head>
+<body>
+
+<div id="topbar">
+  <div class="dots"><div class="dot dot-r"></div><div class="dot dot-y"></div><div class="dot dot-g"></div></div>
+  <span id="topbar-title">juan@portfolio: ~</span>
+  <div id="topbar-links">
+    <a href="https://juanhiguera.es">🌐 Full site</a>
+    <a href="https://github.com/juannhm02" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/juan-higuera-mohedano" target="_blank">LinkedIn</a>
+  </div>
+</div>
+
+<div id="box">
+  <pre id="art">
+ ██╗  ██╗ ██████╗ ██╗  ██╗
+ ██║  ██║██╔═████╗██║  ██║
+ ███████║██║██╔██║███████║
+ ╚════██║████╔╝██║╚════██║
+      ██║╚██████╔╝     ██║
+      ╚═╝ ╚═════╝      ╚═╝</pre>
+
+  <div class="label">exit code</div>
+  <div class="code">404</div>
+  <div class="msg">Page not found</div>
+  <div class="sub">The path you requested does not exist on this machine.</div>
+
+  <div class="prompt-line">
+    <span>juan@portfolio:~$</span> <span class="cmd">ls <span style="color:var(--red)">{{ requested_path }}</span></span> <span id="cursor"></span>
+  </div>
+  <div class="prompt-line" style="color:var(--red);font-size:12px;margin-top:-12px">
+    bash: no such file or directory
+  </div>
+
+  <div class="buttons">
+    <a class="btn btn-home" href="/">cd ~</a>
+    <a class="btn" href="/terminal-portfolio.html">open terminal</a>
+    <a class="btn" onclick="history.back();return false;" href="#">go back</a>
+  </div>
+</div>
+
+<script>
+  // Replace placeholder with actual path
+  const path = window.location.pathname;
+  document.querySelectorAll('.cmd').forEach(el => {
+    el.innerHTML = el.innerHTML.replace('{{ requested_path }}', path);
+  });
+</script>
+</body>
+</html>
